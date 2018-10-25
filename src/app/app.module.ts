@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -9,6 +10,11 @@ import { RegisterPageComponent } from './componentes/register-page/register-page
 import { NotFoundPageComponent } from './componentes/not-found-page/not-found-page.component';
 import { PrivadoPageComponent } from './componentes/privado-page/privado-page.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
+import { AuthService } from './servicos/auth.service';
+import { FormsModule } from '@angular/forms';
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -22,9 +28,12 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebaseconfig)
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
