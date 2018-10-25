@@ -17,7 +17,7 @@ export class RegisterPageComponent implements OnInit {
   ) { }
 
   onSubmitAddUser() {
-    this.authService.registerUser(String(this.email), String(this.password))
+    this.authService.registerUser(this.email, this.password)
     .then((res) => {
       this.router.navigate(['/privado']);
     }).catch((err) => {

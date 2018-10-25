@@ -11,15 +11,15 @@
       </li>
     </ul>
 
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
+    <ul class="navbar-nav justify-content-end">
+      <li class="nav-item" *ngIf="!isLogin">
         <a class="nav-link" href="#" routerLink="/login">Entrar</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="!isLogin">
         <a class="nav-link" href="#" routerLink="/register">Inscrever-se?</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">sair</a>
+      <li class="nav-item" *ngIf="isLogin">
+        <a class="nav-link" href="#" (click)="onClickLogout()" >sair</a>
       </li>
     </ul>
   </div>
