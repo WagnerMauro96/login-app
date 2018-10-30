@@ -12,6 +12,14 @@
     </ul>
 
     <ul class="navbar-nav justify-content-end">
+      <li class="nav-item" *ngIf="isLogin">
+        <a href="" class="nav-link">{{nomeDeUsuario}}</a>
+      </li>
+      <li class="nav-item" *ngIf="isLogin">
+          <img src="{{fotoUsuario}}" class="rounded-circle">
+          <span class="badge pill badge-secondary">{{emailDeUsuario}}</span>
+      </li>
+
       <li class="nav-item" *ngIf="!isLogin">
         <a class="nav-link" href="#" routerLink="/login">Entrar</a>
       </li>
