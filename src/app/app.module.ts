@@ -14,6 +14,8 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { AuthService } from './servicos/auth.service';
 import { FormsModule } from '@angular/forms';
 
+import { FlashMessagesModule, FlashMessagesService } from 'angular2-flash-messages';
+
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
@@ -32,9 +34,10 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     AppRoutingModule,
     FormsModule,
     AngularFireAuthModule,
-    AngularFireModule.initializeApp(environment.firebaseconfig)
+    AngularFireModule.initializeApp(environment.firebaseconfig),
+    FlashMessagesModule
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, FlashMessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
