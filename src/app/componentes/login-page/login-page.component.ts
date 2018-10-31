@@ -46,7 +46,7 @@ export class LoginPageComponent implements OnInit {
     }).catch(err => console.log(err.message));
   }
   onClickTwitterLogin() {
-    this.authService.loginGoogle().then((res) => {
+    this.authService.loginTwitter().then((res) => {
       this.router.navigate(['/privado']);
     }).catch(err => console.log(err.message));
   }

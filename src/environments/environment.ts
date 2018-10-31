@@ -4,13 +4,13 @@
 
 export const environment = {
   production: false,
-  firebaseconfig: {
-    apiKey: 'AIzaSyC2kg5bEAuDmlvep1C_qp2xp3j2Zi-XYzE',
-    authDomain: 'auth-ap.firebaseapp.com',
-    databaseURL: 'https://auth-ap.firebaseio.com',
-    projectId: 'auth-ap',
-    storageBucket: 'auth-ap.appspot.com',
-    messagingSenderId: '349967012268'
+  firebaseconfig : {
+    apiKey: 'AIzaSyBmXxJr6cCTQcvrGonPzD2Clghbqa95M1U',
+    authDomain: 'loginapp-7f496.firebaseapp.com',
+    databaseURL: 'https://loginapp-7f496.firebaseio.com',
+    projectId: 'loginapp-7f496',
+    storageBucket: '',
+    messagingSenderId: '1093707174867'
   }
 };
 
